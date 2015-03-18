@@ -1,0 +1,11 @@
+{
+    "port"     : 5000,
+    "appUrl"   : "http://localhost:5000/",
+    "mongoDB"  : {
+        "name" : "secretpass",
+        "host" : "localhost"
+    },
+    "mongoHQ": {
+
+    }
+}
