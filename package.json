@@ -1,0 +1,24 @@
+{
+  "name": "tubecast",
+  "version": "1.0.0",
+  "description": "video cast",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rigoxls/tubeCast.git"
+  },
+  "keywords": [
+    "youtube",
+    "node",
+    "backbone",
+    "javascript"
+  ],
+  "author": "Rigoberto Giraldo Carmona",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rigoxls/tubeCast/issues"
+  }
+}
