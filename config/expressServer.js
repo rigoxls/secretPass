@@ -1,8 +1,9 @@
 var env = process.env.NODE_ENV || 'production',
     express = require('express'),
+    swig = require('swig'),
     bodyParser = require('body-parser'),
     session = require('express-session'),
-    middelwares = require('../app/middlewares/admin');
+    middlewares = require('../app/middlewares/admin');
 
 var ExpressServer = function(config){
     config = config || {};
@@ -23,7 +24,7 @@ var ExpressServer = function(config){
     }
 
     //tell express we are goind to use swig
-    this.expressServer.engine('html', swig.rederFile);
+    this.expressServer.engine('html', swig.renderFile);
     this.expressServer.set('view engine', 'html');
     swig.setDefaults({ varControls: ['[[', ']]'] });
 
@@ -39,4 +40,4 @@ var ExpressServer = function(config){
     }
 };
 
-modules.exports = ExpressServer;
+module.exports = ExpressServer;

@@ -1,9 +1,9 @@
-var controllersManager = require('./app/default/controllers/controllersManager');
+var controllersManager = require('./app/modules/controllers/controllersManager');
 
 var Routes = function(app){
     var controllers = [];
 
-    for(var cm incontrollersManager){
+    for(var cm in controllersManager){
         controllers[cm] = new controllersManager[cm];
     }
 
