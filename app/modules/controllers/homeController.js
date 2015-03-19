@@ -8,8 +8,8 @@ var Home = function(){
 };
 
 Home.prototype.home = function(req, res, next){
-    console.info('do something');
-    res.send('home');
+    var object = {};
+    res.render('home', object);
 }
 
 module.exports = Home;

@@ -29,7 +29,7 @@ var ExpressServer = function(config){
     swig.setDefaults({ varControls: ['[[', ']]'] });
 
     //where templates are located
-    this.expressServer.set('views', __dirname + '/../app/default/views/templates');
+    this.expressServer.set('views', __dirname + '/../app/modules/views/templates');
 
     if(env == 'development'){
         console.info('dev environment');
