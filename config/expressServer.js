@@ -3,7 +3,10 @@ var env = process.env.NODE_ENV || 'production',
     swig = require('swig'),
     bodyParser = require('body-parser'),
     session = require('express-session'),
+    passport = require('passport'),
     middlewares = require('../app/middlewares/admin');
+
+    require('./passportConfig')();
 
 var ExpressServer = function(config){
     config = config || {};
@@ -17,6 +20,9 @@ var ExpressServer = function(config){
         resave: false,
         saveUninitialized: false
     }));
+
+    this.expressServer.use(passport.initialize());
+    this.expressServer.use(passport.session());
 
     //working with middlewares
     for(var middleware in middlewares){
