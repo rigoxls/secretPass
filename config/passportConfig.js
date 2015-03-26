@@ -49,7 +49,7 @@ var passportModule = function(){
         clientID: conf.facebookCredentials.appId,
         clientSecret: conf.facebookCredentials.secret,
         callbackURL: "/auth/facebook/callback",
-        profileFields : ['picture']
+        profileFields : ['id', 'displayName', 'gender', 'profileUrl', 'photos']
     },
     function(accessToken, refreshToken, profile, done){
 
